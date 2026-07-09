@@ -1,0 +1,20 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Azure/azure-dev/main/schemas/v1.0/azure.yaml.json
+
+name: lamna-health-portal
+metadata:
+  template: lamna-health-portal@0.0.1
+
+# Single containerized Next.js service deployed to Azure Container Apps.
+# azd builds the Docker image, pushes it to the provisioned ACR, and updates
+# the Container App tagged `azd-service-name: web`.
+services:
+  web:
+    project: .
+    language: js
+    host: containerapp
+    docker:
+      path: ./Dockerfile
+      context: .
+      # Build the image remotely with ACR Tasks (no local Docker daemon
+      # required) — also guarantees a linux/amd64 image for Container Apps.
+      remoteBuild: true

@@ -1,0 +1,23 @@
+# Build artifacts and deps (rebuilt inside the image)
+node_modules
+.next
+out
+
+# Local / tooling
+.git
+.gitignore
+.azure
+.vscode
+npm-debug.log*
+yarn-error.log*
+
+# Docker
+Dockerfile
+.dockerignore
+
+# Env files — never bake secrets into the image
+.env
+.env.*
+
+# Docs
+README.md
