@@ -1,0 +1,98 @@
+[
+  {
+    "id": "PRV-1001",
+    "name": "Dr. Priya Raman",
+    "specialty": "Primary Care / Family Medicine",
+    "organization": "Rivertown Family Health",
+    "address": {
+      "street": "210 Willow Bend Rd, Suite 120",
+      "city": "Rivertown",
+      "state": "OR",
+      "zip": "97005"
+    },
+    "phone": "(555) 0134-2201",
+    "acceptingNewPatients": true,
+    "inNetwork": true,
+    "rating": 4.8
+  },
+  {
+    "id": "PRV-1002",
+    "name": "Dr. Marcus Feld",
+    "specialty": "Cardiology",
+    "organization": "Cedar Ridge Heart Institute",
+    "address": {
+      "street": "1500 Summit Parkway",
+      "city": "Rivertown",
+      "state": "OR",
+      "zip": "97006"
+    },
+    "phone": "(555) 0155-9087",
+    "acceptingNewPatients": false,
+    "inNetwork": true,
+    "rating": 4.6
+  },
+  {
+    "id": "PRV-1003",
+    "name": "Dr. Lena Alvarado",
+    "specialty": "Primary Care / Internal Medicine",
+    "organization": "Brightwater Community Clinic",
+    "address": {
+      "street": "44 Harborview St",
+      "city": "Brightwater",
+      "state": "WA",
+      "zip": "98101"
+    },
+    "phone": "(555) 0148-7742",
+    "acceptingNewPatients": true,
+    "inNetwork": true,
+    "rating": 4.9
+  },
+  {
+    "id": "PRV-1004",
+    "name": "Dr. Samuel Oduya",
+    "specialty": "Dermatology",
+    "organization": "Lakeside Skin & Wellness",
+    "address": {
+      "street": "980 Birchwood Ave, Suite 4",
+      "city": "Brightwater",
+      "state": "WA",
+      "zip": "98102"
+    },
+    "phone": "(555) 0161-3350",
+    "acceptingNewPatients": true,
+    "inNetwork": true,
+    "rating": 4.4
+  },
+  {
+    "id": "PRV-1005",
+    "name": "Dr. Hana Cho",
+    "specialty": "Pediatrics",
+    "organization": "Rivertown Family Health",
+    "address": {
+      "street": "210 Willow Bend Rd, Suite 130",
+      "city": "Rivertown",
+      "state": "OR",
+      "zip": "97005"
+    },
+    "phone": "(555) 0134-2288",
+    "acceptingNewPatients": true,
+    "inNetwork": true,
+    "rating": 4.7
+  },
+  {
+    "id": "PRV-1006",
+    "name": "Dr. Owen Blackwell",
+    "specialty": "Orthopedics",
+    "organization": "Summit Bone & Joint",
+    "address": {
+      "street": "2100 Grandview Blvd",
+      "city": "Rivertown",
+      "state": "OR",
+      "zip": "97007"
+    },
+    "phone": "(555) 0159-4410",
+    "acceptingNewPatients": false,
+    "inNetwork": false,
+    "rating": 4.2
+  }
+]

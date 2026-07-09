@@ -1,0 +1,107 @@
+[
+  {
+    "id": "LH-2024-04815",
+    "firstName": "Dana",
+    "lastName": "Okoro",
+    "dateOfBirth": "1987-03-12",
+    "email": "dana.okoro@example.com",
+    "phone": "(555) 0142-8890",
+    "address": {
+      "street": "418 Cedar Hollow Ave",
+      "city": "Rivertown",
+      "state": "OR",
+      "zip": "97005"
+    },
+    "memberSince": "2021-01-01",
+    "plan": {
+      "name": "Lamna Complete Care",
+      "type": "PPO",
+      "network": "Lamna Preferred Network",
+      "effectiveDate": "2026-01-01",
+      "renewalDate": "2027-01-01",
+      "monthlyPremium": 284
+    },
+    "coverage": {
+      "deductible": {
+        "individual": 1500,
+        "family": 3000,
+        "metIndividual": 620,
+        "metFamily": 940
+      },
+      "outOfPocketMax": {
+        "individual": 6000,
+        "family": 12000,
+        "metIndividual": 1180,
+        "metFamily": 1750
+      },
+      "coinsuranceRate": 0.2,
+      "copays": {
+        "primaryCare": 25,
+        "specialist": 45,
+        "urgentCare": 60,
+        "emergencyRoom": 250
+      }
+    },
+    "primaryCareProviderId": "PRV-1001",
+    "dependents": [
+      {
+        "firstName": "Miles",
+        "lastName": "Okoro",
+        "relationship": "spouse",
+        "dateOfBirth": "1985-09-30"
+      },
+      {
+        "firstName": "Ava",
+        "lastName": "Okoro",
+        "relationship": "child",
+        "dateOfBirth": "2015-06-18"
+      }
+    ]
+  },
+  {
+    "id": "LH-2023-01192",
+    "firstName": "Theo",
+    "lastName": "Nakamura",
+    "dateOfBirth": "1994-11-05",
+    "email": "theo.nakamura@example.com",
+    "phone": "(555) 0177-3321",
+    "address": {
+      "street": "77 Maple Court, Apt 3B",
+      "city": "Brightwater",
+      "state": "WA",
+      "zip": "98101"
+    },
+    "memberSince": "2023-04-01",
+    "plan": {
+      "name": "Lamna Essential",
+      "type": "HMO",
+      "network": "Lamna Community Network",
+      "effectiveDate": "2026-01-01",
+      "renewalDate": "2027-01-01",
+      "monthlyPremium": 168
+    },
+    "coverage": {
+      "deductible": {
+        "individual": 2500,
+        "family": 5000,
+        "metIndividual": 300,
+        "metFamily": 300
+      },
+      "outOfPocketMax": {
+        "individual": 7500,
+        "family": 15000,
+        "metIndividual": 300,
+        "metFamily": 300
+      },
+      "coinsuranceRate": 0.3,
+      "copays": {
+        "primaryCare": 20,
+        "specialist": 50,
+        "urgentCare": 55,
+        "emergencyRoom": 300
+      }
+    },
+    "primaryCareProviderId": "PRV-1003",
+    "dependents": []
+  }
+]
