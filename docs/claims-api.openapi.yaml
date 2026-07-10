@@ -1,0 +1,116 @@
+openapi: 3.1.0
+info:
+  title: Lamna Health — Claims API
+  version: 1.0.0
+  description: >
+    Source of truth for claim fields and statuses in the Lamna Health member
+    portal. Fictional data only — internal enablement, HIPAA-safe. This contract
+    is reused by the Microsoft Foundry claims agent (see docs/foundry-notes.md)
+    as a tool/action, and mirrors the `Claim` model in lib/types.ts.
+servers:
+  - url: https://api.lamna-health.example/v1
+    description: Fictional stub endpoint (demo only)
+tags:
+  - name: Claims
+    description: Read-only claim lookups scoped to the signed-in member.
+paths:
+  /claims:
+    get:
+      tags: [Claims]
+      operationId: listClaims
+      summary: List claims for the signed-in member
+      description: >
+        Returns claims belonging to the current member only. Member scoping is
+        enforced server-side via `memberId` — a member can never see another
+        member's claims (see docs/claims-domain.md).
+      parameters:
+        - name: status
+          in: query
+          required: false
+          description: Optional filter by claim status.
+          schema:
+            $ref: "#/components/schemas/ClaimStatus"
+      responses:
+        "200":
+          description: The member's claims.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Claim"
+        "401":
+          description: Not authenticated.
+  /claims/{id}:
+    get:
+      tags: [Claims]
+      operationId: getClaimById
+      summary: Get a single claim by id
+      description: >
+        Returns the claim only if it belongs to the signed-in member; otherwise
+        responds 404 (never 403) so claim existence is not disclosed.
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: Claim id, e.g. "CLM-2026-0001".
+          schema:
+            type: string
+            pattern: "^CLM-\\d{4}-\\d{4}$"
+      responses:
+        "200":
+          description: The requested claim.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Claim"
+        "401":
+          description: Not authenticated.
+        "404":
+          description: No such claim for this member.
+components:
+  schemas:
+    ClaimStatus:
+      type: string
+      description: Lifecycle status of a claim (see docs/claims-domain.md).
+      enum:
+        - Received
+        - In review
+        - Processed
+        - Paid
+        - Denied
+    Claim:
+      type: object
+      required:
+        - id
+        - memberId
+        - dateOfService
+        - provider
+        - amount
+        - status
+      properties:
+        id:
+          type: string
+          description: Human-readable claim id.
+          pattern: "^CLM-\\d{4}-\\d{4}$"
+          examples: ["CLM-2026-0001"]
+        memberId:
+          type: string
+          description: References Member.id in data/members.json.
+          examples: ["LH-2024-04815"]
+        dateOfService:
+          type: string
+          format: date
+          description: ISO date (yyyy-mm-dd) the service was rendered.
+          examples: ["2026-05-14"]
+        provider:
+          type: string
+          description: Display name of the servicing provider.
+          examples: ["Rivertown Family Health"]
+        amount:
+          type: number
+          description: Billed amount in USD.
+          minimum: 0
+          examples: [420]
+        status:
+          $ref: "#/components/schemas/ClaimStatus"
