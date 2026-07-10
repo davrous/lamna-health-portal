@@ -5,4 +5,5 @@
 export * from "./types";
 export * from "./members";
 export * from "./providers";
+export * from "./claims";
 export * from "./format";

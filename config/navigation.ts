@@ -1,5 +1,5 @@
 import type { LucideIcon } from "lucide-react";
-import { FileText, LayoutDashboard, ShieldCheck, Stethoscope } from "lucide-react";
+import { FileText, LayoutDashboard, ReceiptText, ShieldCheck, Stethoscope } from "lucide-react";
 
 export interface NavItem {
   label: string;
@@ -47,5 +47,5 @@ export const NAV_ITEMS: NavItem[] = [
     description: "Plan summaries, ID cards, and forms.",
   },
   // Backlog — Claims (not built yet):
-  // { label: "Claims", href: "/claims", icon: ReceiptText, description: "Track claim status and history." },
+  { label: "Claims", href: "/claims", icon: ReceiptText, description: "Track claim status and history." },
 ];
