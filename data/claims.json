@@ -1,0 +1,66 @@
+[
+  {
+    "id": "CLM-2026-0001",
+    "memberId": "LH-2024-04815",
+    "dateOfService": "2026-05-14",
+    "provider": "Rivertown Family Health",
+    "amount": 420,
+    "status": "Paid"
+  },
+  {
+    "id": "CLM-2026-0002",
+    "memberId": "LH-2024-04815",
+    "dateOfService": "2026-06-02",
+    "provider": "Cedar Ridge Heart Institute",
+    "amount": 1850,
+    "status": "Processed"
+  },
+  {
+    "id": "CLM-2026-0003",
+    "memberId": "LH-2024-04815",
+    "dateOfService": "2026-06-20",
+    "provider": "Rivertown Family Health",
+    "amount": 260,
+    "status": "In review"
+  },
+  {
+    "id": "CLM-2026-0004",
+    "memberId": "LH-2024-04815",
+    "dateOfService": "2026-06-28",
+    "provider": "Summit Urgent Care",
+    "amount": 340,
+    "status": "Received"
+  },
+  {
+    "id": "CLM-2026-0005",
+    "memberId": "LH-2024-04815",
+    "dateOfService": "2026-04-10",
+    "provider": "Cedar Ridge Heart Institute",
+    "amount": 5200,
+    "status": "Denied"
+  },
+  {
+    "id": "CLM-2026-0006",
+    "memberId": "LH-2024-04815",
+    "dateOfService": "2026-05-30",
+    "provider": "Brightwater Community Clinic",
+    "amount": 175,
+    "status": "Paid"
+  },
+  {
+    "id": "CLM-2026-0101",
+    "memberId": "LH-2023-01192",
+    "dateOfService": "2026-05-18",
+    "provider": "Brightwater Community Clinic",
+    "amount": 90,
+    "status": "Paid"
+  },
+  {
+    "id": "CLM-2026-0102",
+    "memberId": "LH-2023-01192",
+    "dateOfService": "2026-06-15",
+    "provider": "Harborview Diagnostics",
+    "amount": 610,
+    "status": "In review"
+  }
+]

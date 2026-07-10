@@ -99,3 +99,32 @@ export interface Provider {
   /** Average member rating, 0–5. */
   rating: number;
 }
+
+/**
+ * Lifecycle status of a claim. See docs/claims-domain.md for the rules:
+ *   Received → In review → Processed → Paid   (Denied is terminal from In review)
+ */
+export type ClaimStatus =
+  | "Received"
+  | "In review"
+  | "Processed"
+  | "Paid"
+  | "Denied";
+
+/**
+ * A single medical claim. Matches docs/claims-api.openapi.yaml and the mock
+ * store in data/claims.json (served by the /api/claims route handlers).
+ */
+export interface Claim {
+  /** Human-readable claim id, e.g. "CLM-2026-0001". */
+  id: string;
+  /** References Member.id — claims are always scoped to their owner. */
+  memberId: string;
+  /** ISO date (yyyy-mm-dd) the service was rendered. */
+  dateOfService: string;
+  /** Display name of the servicing provider. */
+  provider: string;
+  /** Billed amount in USD. */
+  amount: number;
+  status: ClaimStatus;
+}

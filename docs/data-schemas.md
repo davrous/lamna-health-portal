@@ -85,11 +85,11 @@ Existing member ids (for referencing from other data): `LH-2024-04815`,
 
 Existing provider ids: `PRV-1001` … `PRV-1006`.
 
-## `data/claims.json` → `Claim[]` (backlog — not created yet)
+## `data/claims.json` → `Claim[]`
 
-Added when the Claims feature ships. Must reference existing member ids and be
-consistent with `docs/claims-api.openapi.yaml` and the `Claim` model in
-`lib/types.ts`:
+The fictional claim store, served over HTTP by the mock API route handlers
+(`app/api/claims/`). References existing member ids and is consistent with
+`docs/claims-api.openapi.yaml` and the `Claim` model in `lib/types.ts`:
 
 ```jsonc
 {
@@ -103,7 +103,7 @@ consistent with `docs/claims-api.openapi.yaml` and the `Claim` model in
 }
 ```
 
-### Proposed additions to `lib/types.ts` (reference only — do not add yet)
+### Claim models in `lib/types.ts`
 
 ```ts
 export type ClaimStatus =

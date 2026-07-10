@@ -8,8 +8,12 @@ info:
     is reused by the Microsoft Foundry claims agent (see docs/foundry-notes.md)
     as a tool/action, and mirrors the `Claim` model in lib/types.ts.
 servers:
+  - url: https://ca-web-tmssd2j3qszb6.mangotree-cff54d3a.eastus2.azurecontainerapps.io/api
+    description: Live mock API served by the portal (Azure Container Apps)
+  - url: http://localhost:3000/api
+    description: Local development (npm run dev)
   - url: https://api.lamna-health.example/v1
-    description: Fictional stub endpoint (demo only)
+    description: Fictional stub endpoint (placeholder)
 tags:
   - name: Claims
     description: Read-only claim lookups scoped to the signed-in member.
